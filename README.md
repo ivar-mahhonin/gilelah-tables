@@ -6,8 +6,8 @@ Custom [Schulte table](https://en.wikipedia.org/wiki/Schulte_table) generator wi
 
 ## Stack
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
-Angular 5 + Typescript 2.5.3 .
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version ~7.1.0
+Angular ~7.1.0 + Typescript ~3.1.6 .
 
 ## Start
 
