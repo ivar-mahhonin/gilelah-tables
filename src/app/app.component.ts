@@ -155,12 +155,13 @@ export class AppComponent extends SubscriptionsManager implements OnInit {
   }
 
   convertNumberToQuadraticEquationString(value: TableValue): TableValue {
-    console.log('++++++++');
     const n: number = value.n;
-    const randomNUmber = random(1, 20);
-    console.log(`(x + ${randomNUmber})(x - ${n})`);
-    const op = `x² + ${randomNUmber - n}x - ${randomNUmber * n}=0`;
-    console.log(op);
+    const randomNUmber = random(n + 2, 20);
+
+    const part1 = randomNUmber - n;
+    const part2 = randomNUmber * n;
+
+    const op = `x² ${part1 > 0 ? '+' : ''} ${part1}x - ${part2}=0`;
     return {n: n, val: op};
   }
 
