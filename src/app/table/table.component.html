@@ -1,0 +1,13 @@
+<div class="table-responsive full-height" align="center">
+  <table class="table full-height" *ngIf="chunkedNumberRange">
+    <tbody>
+    <tr *ngFor="let rowIndex of rows;">
+      <td #tableTd *ngFor="let colIndex of columns;" (click)="onCellClick(chunkedNumberRange[rowIndex][colIndex])"
+          [ngStyle]="{'font-size':tdFontSize}">
+        <app-table-cell [value]="chunkedNumberRange[rowIndex][colIndex]" [gameStarted]="gameStarted"></app-table-cell>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+

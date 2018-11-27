@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col col-lg-2">
+      <div class="row" *ngIf="findNumbers.length > 0">
+          <button type="button" class="btn btn-warning">Find number(s): {{findNumbers.toString()}}</button>
+        </div>
+    </div>
+    <div class="col-md-auto">
+      <button type="button" class="btn btn-success" (click)="start()" [disabled]="startTime">Start</button>
+    <button type="button" class="btn btn-danger" (click)="stop()" [disabled]="!startTime">Stop</button>
+    </div>
+    <div class="col col-lg-2">
+      <div class="row message" *ngIf="timeLog">
+        <button type="button" class="btn btn-primary">
+        {{timeLog}}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
